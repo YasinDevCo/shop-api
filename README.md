@@ -50,11 +50,85 @@ NODE_ENV=development
 JWT_SECRET=your_super_secret_key_change_this
 JWT_EXPIRES_IN=7d
 FRONTEND_URL=http://localhost:3000
+
 ### 4.اجرا در حالت توسعه
 npm run dev
 ### 5.ساخت نسخه تولید
 npm run build
 npm start
+
+
+
+# ========== احراز هویت (Auth) ==========
+POST   /api/auth/register
+POST   /api/auth/login
+POST   /api/auth/logout
+GET    /api/auth/me
+POST   /api/auth/refresh-token
+
+# ========== کاربران (User) ==========
+GET    /api/user/profile
+PUT    /api/user/profile
+PUT    /api/user/change-password
+DELETE /api/user/delete
+
+# ========== آدرس‌ها (Addresses) ==========
+GET    /api/addresses
+POST   /api/addresses
+PUT    /api/addresses/:id
+DELETE /api/addresses/:id
+
+# ========== محصولات (Product) ==========
+GET    /api/product
+GET    /api/product/:id
+POST   /api/product
+PUT    /api/product/:id
+DELETE /api/product/:id
+GET    /api/product/search?q=
+
+# ========== دسته‌بندی (Category) ==========
+GET    /api/category
+POST   /api/category
+PUT    /api/category/:id
+DELETE /api/category/:id
+
+# ========== سفارشات (Orders) ==========
+GET    /api/orders
+GET    /api/orders/:id
+POST   /api/orders
+PUT    /api/orders/:id/cancel
+
+# ========== پرداخت (Payment) ==========
+POST   /api/payment/create
+GET    /api/payment/verify
+GET    /api/payment/status/:id
+
+# ========== علاقه‌مندی‌ها (Wishlist) ==========
+GET    /api/wishlist
+POST   /api/wishlist/:productId
+DELETE /api/wishlist/:productId
+
+# ========== نظرات (Reviews) ==========
+GET    /api/reviews/product/:productId
+POST   /api/reviews/:productId
+PUT    /api/reviews/:id
+DELETE /api/reviews/:id
+
+# ========== وبلاگ (Blogs) ==========
+GET    /api/blogs
+GET    /api/blogs/:id
+POST   /api/blogs
+PUT    /api/blogs/:id
+DELETE /api/blogs/:id
+
+# ========== تماس (Contact) ==========
+POST   /api/contact
+GET    /api/contact
+
+# ========== داشبورد (Dashboard) ==========
+GET    /api/dashboard/stats
+GET    /api/dashboard/users
+GET    /api/dashboard/sales
 
 ```bash
 
